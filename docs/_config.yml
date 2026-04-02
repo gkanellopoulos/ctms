@@ -1,0 +1,7 @@
+title: CTMS
+description: Canonical Tool Manifest Specification
+url: "https://gkanellopoulos.github.io"
+baseurl: "/ctms"
+markdown: kramdown
+kramdown:
+  input: GFM

@@ -1,0 +1,114 @@
+{
+  "payloadType": "application/vnd.in-toto+json",
+  "payload": {
+    "_type": "https://in-toto.io/Statement/v1",
+    "subject": [
+      {
+        "name": "io.github.weathertools/weather-server/get_weather",
+        "digest": {
+          "sha256": "e6a93f2df05d6ace2a6910459c1c259c548ac1355102e2560a6d25df42f41020"
+        }
+      }
+    ],
+    "predicateType": "https://ctms.dev/v1/tool-manifest",
+    "predicate": {
+      "ctmsVersion": "1.0",
+      "manifestVersion": {
+        "major": 1,
+        "minor": 0
+      },
+      "serverVersion": "1.0.0",
+      "signingTimestamp": "2026-03-25T19:50:06Z",
+      "canonicalForm": {
+        "annotations": {
+          "openWorldHint": true,
+          "readOnlyHint": true
+        },
+        "description": "Get current weather information for a location, including temperature, conditions, and humidity.",
+        "inputSchema": {
+          "properties": {
+            "location": {
+              "description": "City name or zip code",
+              "type": "string"
+            },
+            "units": {
+              "description": "Temperature unit",
+              "enum": [
+                "celsius",
+                "fahrenheit"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "location"
+          ],
+          "type": "object"
+        },
+        "name": "get_weather",
+        "title": "Get Weather"
+      }
+    }
+  },
+  "signatures": [
+    {
+      "keyid": "",
+      "sig": "MEQCICiEd60Cube7tra/KMAncHsIjFhxVP0N0Emlv2Fycj5LAiBA/o29TpvmqpwVkqDj0gX7lE173RDtJxTF/VDeISjoYA=="
+    }
+  ],
+  "sigstoreBundle": {
+    "mediaType": "application/vnd.dev.sigstore.bundle.v0.3+json",
+    "verificationMaterial": {
+      "certificate": {
+        "rawBytes": "MIIC2TCCAl6gAwIBAgIUbPu1kFGELoXwoyo7TJgYxP2p8PwwCgYIKoZIzj0EAwMwNzEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MR4wHAYDVQQDExVzaWdzdG9yZS1pbnRlcm1lZGlhdGUwHhcNMjYwMzI1MTk1MDAyWhcNMjYwMzI1MjAwMDAyWjAAMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEjueibJSABsM36lT6E6UHII+++oo8hpU/DPcIkDFGE37fatUpr1T0Jj72qM/zjHcK+pFcr7q6YjJtzOqtKU/eyqOCAX0wggF5MA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAdBgNVHQ4EFgQUyZIx/0HuYfkM6uUxqfOe+hGJlcswHwYDVR0jBBgwFoAUcYYwphR8Ym/599b0BRp/X//rb6wwJwYDVR0RAQH/BB0wG4EZZ2VvcmdlQGdrYW5lbGxvcG91bG9zLmNvbTAsBgorBgEEAYO/MAEBBB5odHRwczovL2dpdGh1Yi5jb20vbG9naW4vb2F1dGgwLgYKKwYBBAGDvzABCAQgDB5odHRwczovL2dpdGh1Yi5jb20vbG9naW4vb2F1dGgwgYoGCisGAQQB1nkCBAIEfAR6AHgAdgArMLzcaIjJ4uHYJiledB9IOTGWAvKcM8teQ0D+sqyGegAAAZ0mjAGjAAAEAwBHMEUCIQDrJR4V9Y0ZrtjFNwod6yS6amdbL6m5ps+dK038PlzWBwIge37byKgpFQUcyVxPxTnBsaundShLnBNe6hK39ygvN9AwCgYIKoZIzj0EAwMDaQAwZgIxALHOFu22QG5IQyn8nvpTScFMme81AsyK4VyRlAuM46aetdnyrYze9TRMKecUCDaCUwIxAIKNgWDsBBv1oxHI+W5SFef2qvgECj/aw6IwbBrkXKb3zgznN2b+j23/um3KrjoLZQ=="
+      },
+      "tlogEntries": [
+        {
+          "logIndex": "3200070",
+          "logId": {
+            "keyId": "09OnDKEw7/hpZiYVPoTRzRbglHk0sylsUovegnRUlJY="
+          },
+          "kindVersion": {
+            "kind": "hashedrekord",
+            "version": "0.0.2"
+          },
+          "integratedTime": "0",
+          "inclusionProof": {
+            "logIndex": "3200070",
+            "rootHash": "zF3Hpc0qKzVkSpA2ZyP6pKjU+VGAG0eE2GQ8n2eyZ6s=",
+            "treeSize": "3200071",
+            "hashes": [
+              "nLtIcjd3XENqj+2wOK51n5qpo4he2GZD4J7RoG7HeRs=",
+              "321/5v5hEq/eGktpOa0vIGd1/ALlKfCxNQxXqfoDG78=",
+              "0ccXZJxpmYk9cbb1saoDo1ZVwtKgT2S2JbszBfA/Xqo=",
+              "02WnL5gKf5pIW2WaYj9wWuaukHBuxtTn+xi8GOM7N+Y=",
+              "hZw3CNydGXv+/cpVFlLrzeemByaF42lEzmguOzVKEeY=",
+              "p51NhPepJSpxl5L+byXGTcYVoX1YtFJX2ISZTaEHqhg=",
+              "r9rRXvxMsQUufrVmk28UV2KP1XIChVmwsn7rsXpCjXM=",
+              "CZJWJtYZFYWwC+DsEiCMnWled/ED66viI0Wz/L+9vxk=",
+              "Y8Q9QaTpqRAlSoWnNwyYGDerVLL1f6b8osmbDYEF6og="
+            ],
+            "checkpoint": {
+              "envelope": "log2025-alpha3.rekor.sigstage.dev\n3200071\nzF3Hpc0qKzVkSpA2ZyP6pKjU+VGAG0eE2GQ8n2eyZ6s=\n\n\u2014 log2025-alpha3.rekor.sigstage.dev 09OnDFJ2nrztBHWg0N+nCygxy7wIwd8dI1/mMySOo67zGDIQCSCdb/Z/RmWRkXfEky5kbYtd5SgyOep1kIu1Lo8a/gY=\n\u2014 witness.stagemole.eu Z/euoAAAAABpxDxt6LC/pwh/mauTNrkdo6sqGn8X5qVGIED2KbtLIyq4lY6R/6Ah3aR84YiTK4XdL7VHEaf0H3Jw8A1fuBs9g31RAA==\n\u2014 staging.witness.transparency.goog/ring-any-bells LhqNyQAAAABpxDxtx2T8Uu+Xe2W91GBFe+vaEhA8myCL679K9tPvJyOWsZ6buFsCLRlsJE4/dqVei3mO2o5SudYffLtOQ3fgtS71Bg==\n\u2014 witness.navigli.sunlight.geomys.org o+AP4gAAAABpxDxu7HOI7BQfWihXDOOK3Ppmk2ObBDjn0z2HPs5OOKyT0CuqUds2OiVDu33UlOz8IUhNZ4GlcOji2BitChbur8agCg==\n"
+            }
+          },
+          "canonicalizedBody": "eyJhcGlWZXJzaW9uIjoiMC4wLjIiLCJraW5kIjoiaGFzaGVkcmVrb3JkIiwic3BlYyI6eyJoYXNoZWRSZWtvcmRWMDAyIjp7ImRhdGEiOnsiYWxnb3JpdGhtIjoiU0hBMl8yNTYiLCJkaWdlc3QiOiI1cWsvTGZCZGFzNHFhUkJGbkJ3bG5GU0t3VFZSQXVKV0NtMGwzMEwwRUNBPSJ9LCJzaWduYXR1cmUiOnsiY29udGVudCI6Ik1FUUNJQ2lFZDYwQ3ViZTd0cmEvS01BbmNIc0lqRmh4VlAwTjBFbWx2MkZ5Y2o1TEFpQkEvbzI5VHB2bXFwd1ZrcURqMGdYN2xFMTczUkR0SnhURi9WRGVJU2pvWUE9PSIsInZlcmlmaWVyIjp7ImtleURldGFpbHMiOiJQS0lYX0VDRFNBX1AyNTZfU0hBXzI1NiIsIng1MDlDZXJ0aWZpY2F0ZSI6eyJyYXdCeXRlcyI6Ik1JSUMyVENDQWw2Z0F3SUJBZ0lVYlB1MWtGR0VMb1h3b3lvN1RKZ1l4UDJwOFB3d0NnWUlLb1pJemowRUF3TXdOekVWTUJNR0ExVUVDaE1NYzJsbmMzUnZjbVV1WkdWMk1SNHdIQVlEVlFRREV4VnphV2R6ZEc5eVpTMXBiblJsY20xbFpHbGhkR1V3SGhjTk1qWXdNekkxTVRrMU1EQXlXaGNOTWpZd016STFNakF3TURBeVdqQUFNRmt3RXdZSEtvWkl6ajBDQVFZSUtvWkl6ajBEQVFjRFFnQUVqdWVpYkpTQUJzTTM2bFQ2RTZVSElJKysrb284aHBVL0RQY0lrREZHRTM3ZmF0VXByMVQwSmo3MnFNL3pqSGNLK3BGY3I3cTZZakp0ek9xdEtVL2V5cU9DQVgwd2dnRjVNQTRHQTFVZER3RUIvd1FFQXdJSGdEQVRCZ05WSFNVRUREQUtCZ2dyQmdFRkJRY0RBekFkQmdOVkhRNEVGZ1FVeVpJeC8wSHVZZmtNNnVVeHFmT2UraEdKbGNzd0h3WURWUjBqQkJnd0ZvQVVjWVl3cGhSOFltLzU5OWIwQlJwL1gvL3JiNnd3SndZRFZSMFJBUUgvQkIwd0c0RVpaMlZ2Y21kbFFHZHJZVzVsYkd4dmNHOTFiRzl6TG1OdmJUQXNCZ29yQmdFRUFZTy9NQUVCQkI1b2RIUndjem92TDJkcGRHaDFZaTVqYjIwdmJHOW5hVzR2YjJGMWRHZ3dMZ1lLS3dZQkJBR0R2ekFCQ0FRZ0RCNW9kSFJ3Y3pvdkwyZHBkR2gxWWk1amIyMHZiRzluYVc0dmIyRjFkR2d3Z1lvR0Npc0dBUVFCMW5rQ0JBSUVmQVI2QUhnQWRnQXJNTHpjYUlqSjR1SFlKaWxlZEI5SU9UR1dBdktjTTh0ZVEwRCtzcXlHZWdBQUFaMG1qQUdqQUFBRUF3QkhNRVVDSVFEckpSNFY5WTBacnRqRk53b2Q2eVM2YW1kYkw2bTVwcytkSzAzOFBseldCd0lnZTM3YnlLZ3BGUVVjeVZ4UHhUbkJzYXVuZFNoTG5CTmU2aEszOXlndk45QXdDZ1lJS29aSXpqMEVBd01EYVFBd1pnSXhBTEhPRnUyMlFHNUlReW44bnZwVFNjRk1tZTgxQXN5SzRWeVJsQXVNNDZhZXRkbnlyWXplOVRSTUtlY1VDRGFDVXdJeEFJS05nV0RzQkJ2MW94SEkrVzVTRmVmMnF2Z0VDai9hdzZJd2JCcmtYS2Izemd6bk4yYitqMjMvdW0zS3Jqb0xaUT09In19fX19fQ=="
+        }
+      ],
+      "timestampVerificationData": {
+        "rfc3161Timestamps": [
+          {
+            "signedTimestamp": "MIIE6jADAgEAMIIE4QYJKoZIhvcNAQcCoIIE0jCCBM4CAQMxDTALBglghkgBZQMEAgEwgcMGCyqGSIb3DQEJEAEEoIGzBIGwMIGtAgEBBgkrBgEEAYO/MAIwMTANBglghkgBZQMEAgEFAAQgpuzL3J2nDt09HJ4yV2O+PVeu3Q0G+eDQ9zD5mveOl3gCFQDPUtmY1NOrzynNpnqb5OJew/5AXBgPMjAyNjAzMjUxOTUwMDNaMAMCAQECCQCNDorsltSCtaAypDAwLjEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MRUwEwYDVQQDEwxzaWdzdG9yZS10c2GgggITMIICDzCCAZagAwIBAgIUCjWhBmHV4kFzxomWp/J98n4DfKcwCgYIKoZIzj0EAwMwOTEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MSAwHgYDVQQDExdzaWdzdG9yZS10c2Etc2VsZnNpZ25lZDAeFw0yNTAzMjgwOTE0MDZaFw0zNTAzMjYwODE0MDZaMC4xFTATBgNVBAoTDHNpZ3N0b3JlLmRldjEVMBMGA1UEAxMMc2lnc3RvcmUtdHNhMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEx1v5F3HpD9egHuknpBFlRz7QBRDJu4aeVzt9zJLRY0lvmx1lF7WBM2c9AN8ZGPQsmDqHlJN2R/7+RxLkvlLzkc19IOx38t7mGGEcB7agUDdCF/Ky3RTLSK0Xo/0AgHQdo2owaDAOBgNVHQ8BAf8EBAMCB4AwHQYDVR0OBBYEFKj8ZPYo3i7mO3NPVIxSxOGc3VOlMB8GA1UdIwQYMBaAFDsgRlletTJNRzDObmPuc3RH8gR9MBYGA1UdJQEB/wQMMAoGCCsGAQUFBwMIMAoGCCqGSM49BAMDA2cAMGQCMESvVS6GGtF33+J19TfwENWJXjRv4i0/HQFwLUSkX6TfV7g0nG8VnqNHJLvEpAtOjQIwUD3uywTXorQP1DgbV09rF9Yen+CEqs/iEpieJWPst280SSOZ5Na+dyPVk9/8SFk6MYIB2zCCAdcCAQEwUTA5MRUwEwYDVQQKEwxzaWdzdG9yZS5kZXYxIDAeBgNVBAMTF3NpZ3N0b3JlLXRzYS1zZWxmc2lnbmVkAhQKNaEGYdXiQXPGiZan8n3yfgN8pzALBglghkgBZQMEAgGggfwwGgYJKoZIhvcNAQkDMQ0GCyqGSIb3DQEJEAEEMBwGCSqGSIb3DQEJBTEPFw0yNjAzMjUxOTUwMDNaMC8GCSqGSIb3DQEJBDEiBCCgWbKcKwUyW2CuRpx89Enzz8QkV52ZnrVtRD0PPO8gITCBjgYLKoZIhvcNAQkQAi8xfzB9MHsweQQgBvT/4Ef+s1mZtzOw16MjUBz8GOTAM2aoRdd1NudLJ0QwVTA9pDswOTEVMBMGA1UEChMMc2lnc3RvcmUuZGV2MSAwHgYDVQQDExdzaWdzdG9yZS10c2Etc2VsZnNpZ25lZAIUCjWhBmHV4kFzxomWp/J98n4DfKcwCgYIKoZIzj0EAwIEZzBlAjEAxyoLy/KgE97YQwETP5BpBk1M60IamEexhva7zyTTAK9xOlwNwY5WpHqW59o9tNJ0AjBlm/4VSGWKh0PLUU1GN9Czh8bsdqXkGWr7dcO4Xe0iDvNZPJIATy/s8cm5uWxbe1c="
+          }
+        ]
+      }
+    },
+    "messageSignature": {
+      "messageDigest": {
+        "algorithm": "SHA2_256",
+        "digest": "5qk/LfBdas4qaRBFnBwlnFSKwTVRAuJWCm0l30L0ECA="
+      },
+      "signature": "MEQCICiEd60Cube7tra/KMAncHsIjFhxVP0N0Emlv2Fycj5LAiBA/o29TpvmqpwVkqDj0gX7lE173RDtJxTF/VDeISjoYA=="
+    }
+  }
+}

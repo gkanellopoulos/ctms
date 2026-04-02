@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <style>
+    :root {
+      --text: #1a1a1a;
+      --text-light: #555;
+      --text-muted: #888;
+      --bg: #fff;
+      --bg-code: #f6f8fa;
+      --border: #e1e4e8;
+      --link: #0366d6;
+      --max-width: 780px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* Header */
+    .site-header {
+      padding: 16px 0;
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .site-header a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+    .site-header a:hover { color: var(--link); }
+
+    /* Typography */
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    p { margin-bottom: 16px; }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    strong { font-weight: 600; }
+
+    blockquote {
+      margin: 16px 0;
+      padding: 0 16px;
+      border-left: 4px solid var(--border);
+      color: var(--text-light);
+    }
+
+    /* Lists */
+    ul, ol { margin-bottom: 16px; padding-left: 28px; }
+    li { margin-bottom: 4px; }
+
+    /* Code */
+    code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 85%;
+      background: var(--bg-code);
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+    pre {
+      background: var(--bg-code);
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+      line-height: 1.5;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+      font-size: 14px;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th { background: var(--bg-code); font-weight: 600; }
+
+    /* Mermaid diagrams */
+    .mermaid {
+      margin: 24px 0;
+      text-align: center;
+    }
+
+    /* Footer */
+    .site-footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .site-footer a { color: var(--text-muted); }
+    .site-footer a:hover { color: var(--link); }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      .container { padding: 24px 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="https://github.com/gkanellopoulos/ctms">CTMS: Canonical Tool Manifest Specification</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://github.com/gkanellopoulos/ctms/blob/main/spec/CTMS-specification.md">Specification</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://github.com/gkanellopoulos/ctms/blob/main/THREAT_MODEL.md">Threat Model</a>
+    </header>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <a href="https://github.com/gkanellopoulos/ctms">github.com/gkanellopoulos/ctms</a>
+      &nbsp;&middot;&nbsp;
+      Apache 2.0
+    </footer>
+  </div>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: false, theme: 'neutral' });
+
+    // Convert ```mermaid code blocks into mermaid divs
+    document.querySelectorAll('pre code.language-mermaid').forEach(function(codeEl) {
+      var div = document.createElement('div');
+      div.className = 'mermaid';
+      div.textContent = codeEl.textContent;
+      codeEl.parentElement.replaceWith(div);
+    });
+
+    await mermaid.run();
+  </script>
+</body>
+</html>

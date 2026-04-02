@@ -1,0 +1,24 @@
+{
+  "name": "get_weather",
+  "title": "Get Weather",
+  "description": "Get current weather information for a location, including temperature, conditions, and humidity.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "location": {
+        "type": "string",
+        "description": "City name or zip code"
+      },
+      "units": {
+        "type": "string",
+        "enum": ["celsius", "fahrenheit"],
+        "description": "Temperature unit"
+      }
+    },
+    "required": ["location"]
+  },
+  "annotations": {
+    "readOnlyHint": true,
+    "openWorldHint": true
+  }
+}

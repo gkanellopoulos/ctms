@@ -1,0 +1,54 @@
+{
+  "payloadType": "application/vnd.in-toto+json",
+  "payload": {
+    "_type": "https://in-toto.io/Statement/v1",
+    "subject": [
+      {
+        "name": "io.github.weathertools/weather-server/get_weather",
+        "digest": {
+          "sha256": "<hex-encoded SHA-256 digest of the canonical form>"
+        }
+      }
+    ],
+    "predicateType": "https://ctms.dev/v1/tool-manifest",
+    "predicate": {
+      "ctmsVersion": "1.0",
+      "manifestVersion": {
+        "major": 1,
+        "minor": 0
+      },
+      "serverVersion": "2.1.0",
+      "signingTimestamp": "2026-03-22T14:30:00Z",
+      "canonicalForm": {
+        "annotations": {
+          "openWorldHint": true,
+          "readOnlyHint": true
+        },
+        "description": "Get current weather information for a location, including temperature, conditions, and humidity.",
+        "inputSchema": {
+          "properties": {
+            "location": {
+              "description": "City name or zip code",
+              "type": "string"
+            },
+            "units": {
+              "description": "Temperature unit",
+              "enum": ["celsius", "fahrenheit"],
+              "type": "string"
+            }
+          },
+          "required": ["location"],
+          "type": "object"
+        },
+        "name": "get_weather",
+        "title": "Get Weather"
+      }
+    }
+  },
+  "signatures": [
+    {
+      "keyid": "",
+      "sig": "<base64-encoded ES256 signature>"
+    }
+  ]
+}

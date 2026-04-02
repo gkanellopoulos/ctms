@@ -1,0 +1,48 @@
+{
+  "name": "query_geo",
+  "description": "Query geographic features by place name or coordinates.",
+  "inputSchema": {
+    "type": "object",
+    "$defs": {
+      "coordinates": {
+        "type": "object",
+        "properties": {
+          "lat": { "type": "number" },
+          "lon": { "type": "number" }
+        },
+        "required": ["lat", "lon"]
+      }
+    },
+    "properties": {
+      "target": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "placeName": { "type": "string" }
+            },
+            "required": ["placeName"]
+          },
+          { "$ref": "#/$defs/coordinates" }
+        ]
+      },
+      "options": {
+        "allOf": [
+          {
+            "type": "object",
+            "properties": {
+              "format": { "type": "string", "enum": ["json", "geojson"] }
+            }
+          },
+          {
+            "type": "object",
+            "properties": {
+              "verbose": { "type": "boolean" }
+            }
+          }
+        ]
+      }
+    },
+    "required": ["target"]
+  }
+}
