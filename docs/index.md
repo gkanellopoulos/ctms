@@ -171,7 +171,7 @@ The gap is structural. There is no verification layer between the server's descr
 
 ## CTMS: Signing and verifying tool metadata
 
-CTMS (Canonical Tool Manifest Specification) defines a signing and verification scheme for MCP tool metadata. The core idea is simple:
+[CTMS](https://github.com/gkanellopoulos/ctms) (Canonical Tool Manifest Specification) defines a signing and verification scheme for MCP tool metadata. The [full specification](https://github.com/gkanellopoulos/ctms/blob/main/spec/CTMS-specification.md) covers canonicalization, signing, versioning, verification, and compliance profiles. The core idea is simple:
 
 1. The publisher signs the tool metadata at release time
 2. The client verifies the signature at runtime
@@ -363,9 +363,12 @@ CTMS covers the metadata integrity layer. It does not address runtime execution 
 
 ## What is next
 
-CTMS v1.0 is published. The specification, reference implementation, test vectors, and threat model are available at:
+CTMS v1.0 is published. Everything is at **[github.com/gkanellopoulos/ctms](https://github.com/gkanellopoulos/ctms)**:
 
-**[github.com/gkanellopoulos/ctms](https://github.com/gkanellopoulos/ctms)**
+- [Specification](https://github.com/gkanellopoulos/ctms/blob/main/spec/CTMS-specification.md)
+- [Threat model](https://github.com/gkanellopoulos/ctms/blob/main/THREAT_MODEL.md) (including CSA TTP mapping)
+- [Reference implementation](https://github.com/gkanellopoulos/ctms/tree/main/reference) (Python library and CLI)
+- [Test vectors](https://github.com/gkanellopoulos/ctms/tree/main/vectors)
 
 We are looking for:
 

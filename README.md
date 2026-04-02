@@ -75,17 +75,26 @@ Existing MCP servers require no changes. The server continues to respond to `too
 
 **Security and compliance teams.** Immutable audit trail of what every tool claimed, signed by whom, and when. Aligned with SLSA and existing supply chain security frameworks.
 
+## Key Documents
+
+- [**Specification**](spec/CTMS-specification.md) - the full CTMS v1.0 specification
+- [**Threat Model**](THREAT_MODEL.md) - attack scenarios, mitigations, residual risks, and CSA TTP mapping
+- [**Reference Implementation**](reference/README.md) - Python library and CLI (install, usage, API, tests)
+- [**Test Vectors**](vectors/README.md) - machine-consumable conformance vectors
+- [**Governance**](governance/GOVERNANCE.md) - governance model and change process
+- [**Article**](https://gkanellopoulos.github.io/ctms/) - "Tool Metadata Poisoning: An Unresolved Attack Surface in MCP"
+
 ## Repository Structure
 
 ```
 spec/              Specification document
 governance/        Governance model
-vectors/           Machine-consumable test vectors (see vectors/README.md)
-reference/         Python reference implementation (see reference/README.md)
+vectors/           Machine-consumable test vectors
+reference/         Python reference implementation
   examples/        Attack demo, MCP client PoC, example signed STM
   tests/           67 offline tests against test vectors
 docs/              GitHub Pages article on tool metadata poisoning
-THREAT_MODEL.md    Threat model with attack scenarios (from spec Section 9)
+THREAT_MODEL.md    Threat model with attack scenarios
 ```
 
 ## Quick Start
