@@ -298,7 +298,7 @@ Organizations MAY define custom conformance profiles that extend or restrict the
 
 ### 5.1 Change taxonomy
 
-Every change to any field in the signing surface requires a new STM with a new version.  The change taxonomy classifies each change as either breaking or semantic based on which field was modified. Section B.6 explains why even "non-breaking" changes require re-signing.
+Every change to any field in the signing surface requires a new STM with a new version. The change taxonomy classifies each change as either breaking or semantic based on which field was modified. Section B.6 explains why even "non-breaking" changes require re-signing.
 
 Breaking changes are changes to fields that define the tool's programmatic contract: the interface that callers use to invoke the tool and interpret its results. A change is classified as breaking if it modifies any of the following fields:
 

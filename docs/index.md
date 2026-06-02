@@ -43,7 +43,7 @@ The model reads that description. It trusts it. It follows it.
 
 ## The trust gap
 
-The MCP specification is explicit about this problem. From the [2025-11-25 spec](https://modelcontextprotocol.io/specification/2025-11-05/server/tools):
+The MCP specification is explicit about this problem. From the [2025-11-25 spec](https://modelcontextprotocol.io/specification/2025-11-25/server/tools):
 
 > Tool descriptions should be considered untrusted, unless obtained from a trusted server.
 

@@ -47,4 +47,4 @@ A tool with `$ref`, `oneOf`, and `allOf` in `inputSchema`. Tests the dereferenci
 ## Notes
 
 - The `.txt` files contain the exact byte sequence that should be the input to the signing operation. No trailing newline.
-- The `weather-stm.json` file contains placeholder values for the signature and digest fields. These are structural examples, not cryptographically valid. The reference implementation will provide end-to-end test vectors with real signatures.
+- The `weather-stm.json` file contains placeholder values for the signature and digest fields. These are structural examples, not cryptographically valid. The reference implementation provides an end-to-end signed STM with real signatures at `reference/examples/weather-signed.stm.json`.
