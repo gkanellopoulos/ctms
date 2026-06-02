@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: "CTMS: Canonical Tool Manifest Specification"
+message: "If you use this specification, please cite as below."
+type: standard
+authors:
+  - given-names: George
+    family-names: Kanellopoulos
+    orcid: "https://orcid.org/0009-0004-3162-1624"
+repository-code: "https://github.com/gkanellopoulos/ctms"
+url: "https://gkanellopoulos.github.io/ctms/"
+abstract: >
+  CTMS defines a signing and verification scheme for MCP (Model Context Protocol)
+  tool metadata. It addresses tool description poisoning attacks by providing
+  a canonical, signable representation of tool capabilities, keyless signing
+  via Sigstore, in-toto attestation envelopes, and a client-side verification
+  procedure. The signed artifact is a Sealed Tool Manifest (STM).
+keywords:
+  - Model Context Protocol
+  - MCP
+  - supply chain security
+  - cryptographic attestation
+  - tool integrity
+  - Sigstore
+  - in-toto
+  - JCS
+  - RFC 8785
+  - AI security
+license: Apache-2.0
+version: "1.0"
+date-released: "2026-06-02"
