@@ -1,5 +1,7 @@
 # CTMS: Canonical Tool Manifest Specification
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20504985.svg)](https://doi.org/10.5281/zenodo.20504985)
+
 CTMS is a specification for signing and verifying MCP tool metadata.
 
 ## The Problem
@@ -122,6 +124,27 @@ See [reference/README.md](reference/README.md) for full CLI and library document
 ## Status
 
 CTMS is at version 1.0 (2026-03-25). The Python reference implementation is included. Feedback is welcome.
+
+## Citation
+
+If you cite CTMS in a paper, report, or other work:
+
+> Kanellopoulos, G. (2026). CTMS: Canonical Tool Manifest Specification (Version 1.0). Zenodo. https://doi.org/10.5281/zenodo.20504985
+
+BibTeX:
+
+```bibtex
+@misc{kanellopoulos_2026_ctms,
+  author       = {Kanellopoulos, George},
+  title        = {{CTMS: Canonical Tool Manifest Specification}},
+  month        = jun,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {1.0},
+  doi          = {10.5281/zenodo.20504985},
+  url          = {https://doi.org/10.5281/zenodo.20504985}
+}
+```
 
 ## Contributing
 
