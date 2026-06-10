@@ -8,7 +8,7 @@ description: "CTMS defines a signing and verification scheme for MCP tool metada
 
 When an AI model discovers a tool, it uses the tool's self-description to decide what the tool does and how to call it. Nothing verifies that description. A compromised or malicious server can rewrite what a tool claims to do, and the model will follow those rewritten instructions without question.
 
-This is tool description poisoning. It has been demonstrated with [91-96% success rates](https://arxiv.org/abs/2504.08623) against MCP (Model Context Protocol) clients. It is not a theoretical risk. It is the next software supply chain attack surface.
+This is tool description poisoning. It has been [demonstrated in practice](https://arxiv.org/abs/2504.03767) against MCP (Model Context Protocol) clients, enabling malicious code execution, remote access, and credential theft. It is not a theoretical risk. It is the next software supply chain attack surface.
 
 This post explains the threat model, walks through concrete attacks, and presents CTMS (Canonical Tool Manifest Specification) -- a signing and verification scheme that prevents these attacks at runtime.
 

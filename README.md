@@ -8,7 +8,7 @@ CTMS is a specification for signing and verifying MCP tool metadata.
 
 When an MCP client discovers a tool, it uses the tool's description to decide what the tool does and how to call it. No standard mechanism verifies that the description hasn't been tampered with, silently changed after deployment, or crafted to manipulate the model's behavior.
 
-Tool description poisoning attacks against MCP have been demonstrated with [91-96% success rates](https://arxiv.org/abs/2504.08623). The attacks work because there is nothing between a tool's description and the language model's trust in it.
+Tool description poisoning attacks against MCP have been [demonstrated in practice](https://arxiv.org/abs/2504.03767), including malicious code execution, remote access, and credential theft. The attacks work because there is nothing between a tool's description and the language model's trust in it.
 
 But malice isn't always required. Tool metadata drifts on its own. A developer updates a description and forgets to re-sign. A deployment script overwrites a schema field. Parameters fall out of sync with what the tool actually accepts. The AI makes calls based on metadata that no longer reflects reality. None of this requires an attacker, just the normal entropy of software development.
 

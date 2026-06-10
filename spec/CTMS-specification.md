@@ -23,7 +23,7 @@ During the MCP lifecycle and specifically in the **[Initialization](https://mode
 
 #### The Gap
 
-Radosevich and Halloran (2025) demonstrated tool poisoning attacks against MCP with 91-96% success rates. The attacks work because there is nothing between a tool’s description and the language model’s trust in it.
+Radosevich and Halloran (2025) demonstrated tool poisoning attacks against MCP, including malicious code execution, remote access, and credential theft. The attacks work because there is nothing between a tool’s description and the language model’s trust in it.
 
 The consequences fall along a spectrum. At the malicious end: a tool description includes hidden instructions that manipulate the AI into exfiltrating data (description poisoning), a description is silently rewritten after deployment so the AI follows new instructions without the user’s knowledge (rug pull), or a malicious description in one server influences how the model uses tools from a different, trusted server (cross-tool shadowing).
 
@@ -684,7 +684,7 @@ This specification requires no IANA registrations. All algorithms, envelope form
 
 ### Informative references
 
-- **Radosevich, W. and Halloran, B.** (2025). "Tool Poisoning Attacks in MCP." Demonstrated 91-96% success rates for tool description poisoning attacks against MCP servers. https://arxiv.org/abs/2504.08623
+- **Radosevich, B. and Halloran, J.T.** (2025). "MCP Safety Audit: LLMs with the Model Context Protocol Allow Major Security Exploits." Demonstrated tool description poisoning attacks against MCP servers, including malicious code execution, remote access, and credential theft. https://arxiv.org/abs/2504.03767
 - **Li, X. et al.** (2025). "A Dual-Signature Verification Framework for MCP Tool Security." Proposed a dual-signature scheme for verifying tool description integrity.
 - **Bhatt, M. et al.** (2025). "ETDI: Enhanced Tool Definition Interface for MCP." Introduced OAuth-enhanced tool definitions with JWS signing for MCP tool authentication and access control.
 - **Hou, X. et al.** (2025). "Model Context Protocol (MCP): Landscape, Security Threats, and Future Research Directions." Surveyed the MCP ecosystem and identified tool validation and supply chain auditability as open research gaps.
