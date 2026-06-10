@@ -1,6 +1,6 @@
 # CTMS: Canonical Tool Manifest Specification
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20504985.svg)](https://doi.org/10.5281/zenodo.20504985)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20504984.svg)](https://doi.org/10.5281/zenodo.20504984)
 
 CTMS is a specification for signing and verifying MCP tool metadata.
 
