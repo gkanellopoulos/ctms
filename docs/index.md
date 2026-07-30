@@ -378,3 +378,7 @@ We are looking for:
 - **Second implementations** in other languages (Rust, TypeScript) to validate the spec
 
 If you work on MCP tooling or AI security, the specification is open and the reference implementation is Apache 2.0 licensed. File an issue, open a PR, or reach out directly.
+
+---
+
+**Update (July 2026):** The MCP 2026-07-28 specification moved the `execution` field out of the core Tool object into the tasks extension. This affects one of the seven CTMS signing surface fields. See [issue #1](https://github.com/gkanellopoulos/ctms/issues/1) for the impact analysis and the v1.1 plan. The security gap statements quoted in this article remain in the 2026-07-28 specification unchanged.
